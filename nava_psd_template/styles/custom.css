@@ -154,26 +154,25 @@ ul {
 /* = reservation section ==================================================== */
 
 .reservation {
+  text-transform: uppercase;
   text-align: center;
   align-self: center;
   color: #f9fafe;
   width: 100%;
 }
 .reservation > h1 {
-  text-transform: uppercase;
   font-size: 72px;
   margin: 10px 0;
 }
 .reservation > p {
-  text-transform: uppercase;
-  font-size: 30px;
   margin: 0 0 45px 0;
+  font-size: 30px;
 }
 
 /* = numbers section ======================================================== */
 
 .numbers_bar {
-  box-shadow: 0px 0px 30px 0px rgba(52, 52, 52, 0.25);
+  box-shadow: 0px 0px 30px 0px rgba(52, 52, 52, 0.35);
   background-color: #f9f9f9;
   font-family: 'Open Sans';
   justify-content: center;
@@ -281,7 +280,7 @@ ul {
   margin: 0;
 }
 .more {
-  margin: 90px 0;
+  padding: 90px 0 90px 0;
 }
 .btn {
   text-transform: uppercase;
@@ -295,9 +294,63 @@ ul {
   color: #343434;
 }
 .btn:hover {
-  box-shadow: 0px 0px 30px 0px rgba(52, 52, 52, 0.25);
+  box-shadow: 0px 0px 30px 0px rgba(52, 52, 52, 0.35);
   background-color: #bdbdbd;
   border-color: #343434;
+}
+
+/*
+================================================================================
+ Make money section styles
+================================================================================
+*/
+
+.make_money .row {
+  margin: 0;
+}
+.make_money {
+  background: url('../images/make_money_background.png') center center;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  color: #f9f9f9;
+  display: flex;
+  height: 600px;
+}
+.make_money h1 {
+  font-size: 72px;
+  margin: 0 0 10px 0;
+}
+.make_money p {
+  margin: 0 0 50px 0;
+  font-size: 30px;
+}
+.btn-alternative {
+  background-color: #e7434e;
+  color: #f9f9f9;
+  border: none;
+}
+.btn-alternative:hover {
+  background-color: #000000;
+}
+
+/*
+================================================================================
+ Featured boats section styles
+================================================================================
+*/
+
+.featured_boats .center-xs h2 {
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-top: 100px;
+  font-size: 30px;
+}
+.featured_boats .center-xs p {
+  margin-bottom: 100px;
+  font-size: 16px;
+  color: #717171;
 }
 
 /*
@@ -412,6 +465,85 @@ ul {
 
 /* = Queries from destination section ======================================= */
 
+@media screen and (max-width: 1119px) {
+  .destination_label::before {
+    padding-left: 10px;
+  }
+}
 @media screen and (max-width: 799px) {
+  .featured_destination {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+  .dest_1, .dest_3 {
+    margin-left: 30px;
+  }
+  .dest_2, .dest_4 {
+    margin-right: 30px;
+  }
 
+  /* Rows margin fixes */
+  .top_destinations .row {
+    margin: 0;
+  }
+  .featured_destination {
+    margin: 0 15px 30px 15px;
+  }
+  .dest_1, .dest_3 {
+    margin-left: 15px;
+  }
+  .dest_2, .dest_4 {
+    margin-right: 15px;
+  }
+
+}
+@media screen and (max-width: 570px) {
+  .featured_destination .label, .destination .label {
+    left: 15px;
+    top: 15px;
+  }
+  .destination_label {
+    font-size: 12px;
+  }
+  .item_heading {
+    padding-right: 15px;
+    bottom: 15px;
+    left: 15px;
+  }
+  .item_heading h2 {
+    font-weight: bold;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .featured_destination {
+    margin: 0 15px 30px 15px;
+  }
+  .dest_1, .dest_2, .dest_3, .dest_4 {
+    margin: 0 15px 30px 15px;
+    max-height: 185px;
+  }
+  .destination img {
+    margin-top: -125px;
+  }
+  .top_destinations .col-xs-6 {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+/* = Queries from make money section ======================================== */
+
+@media screen and (max-width: 875px) {
+  .make_money h1 {
+    margin-bottom: 50px;
+  }
+  .make_money p {
+    display: none;
+  }
+}
+@media screen and (max-width: 680px) {
+  .make_money h1 {
+    font-size: 36px;
+  }
 }
