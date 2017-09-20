@@ -70,10 +70,11 @@ ul {
 */
 
 .header_bg {
-  background: url('../images/header_background.png') center;
+  background: url('../images/header_background.png') center center no-repeat;
   justify-content: space-between;
+  background-size: cover;
   flex-direction: column;
-  min-height: 87vh;
+  height: 850px;
   display: flex;
 }
 
@@ -98,6 +99,7 @@ ul {
 .brand_logo {
   padding: 0 !important;
   margin-right: auto;
+  margin-top: 4px;
 }
 .menu > li {
   padding: 0 25px;
@@ -165,10 +167,7 @@ ul {
 .reservation > p {
   text-transform: uppercase;
   font-size: 30px;
-  margin: 0;
-}
-.reservation .default_form {
-  margin-top: 45px;
+  margin: 0 0 45px 0;
 }
 
 /* = numbers section ======================================================== */
@@ -195,13 +194,155 @@ ul {
   width: 1px;
 }
 
+/*
+================================================================================
+ Top destinations section styles
+================================================================================
+*/
 
+.top_destinations {
+  margin-top: 180px;
+}
+.top_destinations h2 {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 30px;
+}
+.top_destinations p {
+  margin-bottom: 110px;
+  font-size: 16px;
+  color: #717171;
+}
+.featured_destination, .destination {
+  transition: .3s ease-in-out;
+  position: relative;
+  border-radius: 5px;
+  margin: 0 0 30px 0;
+  overflow: hidden;
+  cursor: pointer;
+  color: #f9f9f9;
+  opacity: .9;
+  padding: 0;
+}
+.featured_destination:hover, .destination:hover {
+  opacity: 1;
+}
+.featured_destination::before, .destination::before {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  /* Gradient background */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 );
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(32,32,32,1) 100%);
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(32,32,32,1) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(32,32,32,1) 100%);
+}
+.featured_destination img, .destination img {
+  border-radius: 5px;
+  height: auto;
+  width: 100%;
+}
+.featured_destination .label, .destination .label {
+  background-color: #e7434e;
+  font-family: 'Open Sans';
+  display: inline-block;
+  position: absolute;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 10px;
+  left: 30px;
+  top: 30px;
+}
+.destination_label {
+  align-items: center;
+  display: flex;
+}
+.destination_label::before {
+  background: url('../images/boat_icon.png');
+  background-repeat: no-repeat;
+  padding-left: 20px;
+  height: 16px;
+  width: 16px;
+  content: '';
+}
+.item_heading {
+  padding-right: 30px;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+.item_heading > h2, .item_heading > p {
+  text-transform: none;
+  color: #f9f9f9;
+  padding: 0;
+  margin: 0;
+}
+.more {
+  margin: 90px 0;
+}
+.btn {
+  text-transform: uppercase;
+  border: 1px solid #bdbdbd;
+  text-decoration: none;
+  padding: 25px 45px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: .3s;
+  color: #343434;
+}
+.btn:hover {
+  box-shadow: 0px 0px 30px 0px rgba(52, 52, 52, 0.25);
+  background-color: #bdbdbd;
+  border-color: #343434;
+}
 
 /*
 ================================================================================
  Media Queries
 ================================================================================
 */
+
+/* = Queries from header ==================================================== */
+
+@media screen and (max-height: 945px) {
+  .header_bg {
+    height: 800px;
+  }
+}
+@media screen and (max-height: 900px) {
+  .header_bg {
+    height: 750px;
+  }
+}
+@media screen and (max-height: 850px) {
+  .header_bg {
+    height: 700px;
+  }
+}
+@media screen and (max-height: 800px) {
+  .header_bg {
+    height: 650px;
+  }
+}
+@media screen and (max-height: 750px) {
+  .header_bg {
+    height: 600px;
+  }
+}
+@media screen and (max-height: 700px) {
+  .header_bg {
+    height: 550px;
+  }
+}
+@media screen and (max-height: 650px) {
+  .header_bg {
+    height: 500px;
+  }
+}
 
 /* = Queries from navigation section ======================================== */
 
@@ -216,9 +357,6 @@ ul {
   }
   .navigation .menu_button, .navigation .brand_logo {
     display: block;
-  }
-  .navigation .brand_logo {
-    margin-top: 4px;
   }
 }
 
@@ -270,4 +408,10 @@ ul {
   .numbers_bar p {
     font-size: 14px;
   }
+}
+
+/* = Queries from destination section ======================================= */
+
+@media screen and (max-width: 799px) {
+
 }
