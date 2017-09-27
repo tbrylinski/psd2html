@@ -7,3 +7,34 @@
 
 // pages
 @import 'home-page';
+
+// buttons btn(font-size, bg-color, color, padding, border)
+.button {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  &:before {
+    background-color: @white;
+    transform: rotate(15deg);
+    transition: .3s ease-in;
+    position: absolute;
+    display: block;
+    height: 100px;
+    width: 40px;
+    content: '';
+    left: -75px;
+    opacity: .5;
+    top: -25px;
+  }
+  &:hover:before {
+    left: 200px;
+  }
+}
+.btn-primary {
+  .btn-variant(12px, @darkBlue, @white, 20px 40px, 2px solid @darkBlue);
+  float: left;
+}
+.btn-secondary {
+  .btn-variant(12px, transparent, @white, 20px 40px, 2px solid @white);
+  float: right;
+}

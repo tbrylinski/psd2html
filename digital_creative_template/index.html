@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
 	<title>TwoHeads Template</title>
 	<meta charset="UTF-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- jQuery -->
-	<script   src="http://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+	<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<!-- main.js -->
 
 	<link rel="stylesheet/less" href="assets/less/main.less">
@@ -14,9 +14,51 @@
 	<script src="assets/js/main.js"></script>
 </head>
 <body>
-	<header class="header"></header>
+	<header class="header">
+		<nav class="navbar container">
+			<div class="row">
+				<div class="col-md-3 col-lg-3 logo-left">
+					<a href="index.html">
+						<img src="assets/images/logo.svg" alt="Brand logo">
+					</a>
+				</div>
+				<div class="col-md-9 col-lg-9">
+					<ul class="menu">
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="#">
+							<img src="assets/images/menu-button.svg" alt="Menu button">
+						</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container hero">
+			<div class="row">
+				<div class="col-md-offset-5 col-md-7 col-lg-offset-5 col-lg-7">
+					<h1>Wonderful</h1>
+					<h3>Design in every pixels</h3>
+					<p>People are definitely a company's greatest asset. It doesn't make any difference whether the product is cars or cosmetics. A company is only as good as the people it keeps.</p>
+					<div class="button-group">
+						<a class="button btn-primary" href="#">Lets rock</a>
+						<a class="button btn-secondary" href="#">Subscribe</a>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
 
-	<main class="home-page"></main>
+	<main class="home-page">
+		<section class="about-us">
+			<div class="container">
+				<div class="col-lg-12">
+					<h1>Who we are</h1>
+				</div>
+			</div>
+		</section>
+	</main>
 
 	<footer class="footer"></footer>
 	<script src="https://use.fontawesome.com/3432cb06ae.js"></script>

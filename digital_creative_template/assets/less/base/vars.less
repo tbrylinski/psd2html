@@ -1,4 +1,19 @@
+// colors
+@white:    #f9f9f9;
+@darkGray: #3c3d41;
+@darkBlue: #262a34;
 
+// buttons btn(font-size, bg-color, color, padding, border)
+.btn-variant(@font-size: 12px, @bg-color: transparent, @color: @white, @padding: 20px 40px, @border: 2px solid @white) {
+  background-color: @bg-color;
+  text-transform: uppercase;
+  font-size: @font-size;
+  margin-right: 15px;
+  padding: @padding;
+  cursor: pointer;
+  border: @border;
+  color: @color;
+}
 
 // breakpoints
 @min-sm: 768px;
