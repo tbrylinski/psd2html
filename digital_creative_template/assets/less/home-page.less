@@ -1,3 +1,111 @@
 .home-page {
-  
+  section {
+    padding-bottom: 125px;
+    .row {
+      margin-top: 125px;
+    }
+    .title {
+      background: url('../images/heading-bg.svg') bottom center no-repeat;
+      background-clip: padding-box;
+      text-transform: uppercase;
+      padding-bottom: 40px;
+      text-align: center;
+      color: @darkGray;
+      font-size: 51px;
+    }
+    .description {
+      text-align: center;
+      line-height: 24px;
+      margin-top: 30px;
+      font-size: 16px;
+      color: @gray;
+    }
+    // --------------------------------------------------- About us section
+    .info-card {
+      text-align: center;
+      padding: 40px 45px;
+      transition: .5s;
+      &:hover {
+        box-shadow: 0px 16px 50px 0px rgba(222, 222, 222, 1);
+        background: #ffffff;
+        cursor: pointer;
+        .icon {
+          border: 1px solid @turquoise;
+          background-color: @turquoise;
+          .fa {
+            color: @white;
+          }
+        }
+      }
+      .icon {
+        margin: 0px auto 40px auto;
+        border: 1px solid @iconColor;
+        border-radius: 25px;
+        position: relative;
+        transition: .5s;
+        height: 75px;
+        width: 50px;
+        .fa {
+          transform: translate(-50%,-50%);
+          position: absolute;
+          color: @iconColor;
+          font-size: 20px;
+          left: 50%;
+          top: 50%;
+        }
+      }
+      h3 {
+        text-transform: capitalize;
+        font-family: 'Open Sans';
+        margin-bottom: 40px;
+        color: @darkGray;
+        font-size: 16px;
+      }
+      p {
+        line-height: 24px;
+        font-size: 14px;
+        color: @gray;
+      }
+    }
+  }
+  // --------------------------------------------------- Offer section
+  .offer {
+    background: url('../images/offer-bg.png') center center;
+    align-items: center;
+    display: flex;
+    height: 860px;
+    color: @white;
+    .information {
+      position: relative;
+      h1 {
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        font-size: 43px;
+      }
+      p {
+        margin-bottom: 90px;
+        line-height: 24px;
+        font-size: 14px;
+      }
+      .nav {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        .pointer {
+          background-color: @gray;
+          border-radius: 50%;
+          margin-right: 10px;
+          display: block;
+          height: 15px;
+          width: 15px;
+          float: left;
+        }
+        .pointer.active {
+          background-color: @white;
+          border-radius: 15px;
+          width: 30px;
+        }
+      }
+    }
+  }
 }
