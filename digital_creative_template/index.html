@@ -13,6 +13,30 @@
 	<script src="assets/js/main.js"></script>
 </head>
 <body>
+
+    <section class="main-menu">
+        <div class="container">
+            <ul class="main-menu__list">
+                <li class="main-menu__item">
+                    <a href="#" class="main-menu__link">Home Page</a>
+                </li>
+                <li class="main-menu__item">
+                    <a href="#" class="main-menu__link">About us</a>
+                </li>
+                <li class="main-menu__item">
+                    <a href="#" class="main-menu__link">Offer</a>
+                </li>
+                <li class="main-menu__item">
+                    <a href="#" class="main-menu__link">Portfolio</a>
+                </li>
+                <li class="main-menu__item">
+                    <a href="#" class="main-menu__link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+<div class="all-content">
 	<header class="header">
 		<nav class="navbar container">
 			<div class="row">
@@ -26,7 +50,7 @@
 						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-						<li><a href="#">
+						<li><a href="#" class="show-menu">
 							<img src="assets/images/menu-button.svg" alt="Menu button">
 						</a></li>
 					</ul>
@@ -115,6 +139,14 @@
 	</main>
 
 	<footer class="footer"></footer>
+</div> <!-- .all-content -->
+    
+    <script>
+        $('.show-menu').click(function() {
+            $('.all-content').toggleClass('active');
+            $('.main-menu').toggleClass('active');
+        });
+    </script>
 	<script src="https://use.fontawesome.com/3432cb06ae.js"></script>
 </body>
 </html>

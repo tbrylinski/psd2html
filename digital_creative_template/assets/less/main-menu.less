@@ -1,0 +1,31 @@
+.main-menu {
+    transition: .3s;
+    margin: 0 auto;
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+
+.main-menu__list {
+    justify-content: center;
+    margin: 50px auto;
+    display: flex;
+    width: 100%;
+}
+
+.main-menu__item {
+    display: inline-block;
+    padding-bottom: 15px;
+    text-align: center;
+    padding-top: 15px;
+    background: @gray;
+    margin: 0 5px;
+    font-size: 0;
+    width: 100%;
+}
+
+.main-menu__link {
+    font-size: 14px;
+    color: @white;
+}

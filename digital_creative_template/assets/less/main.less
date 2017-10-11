@@ -2,11 +2,23 @@
 @import 'base';
 
 // templates
+@import 'main-menu';
 @import 'header';
 @import 'footer';
 
 // pages
 @import 'home-page';
+
+// .all-content
+.all-content {
+    transform: scale(1);
+    transition: .3s;
+    &.active {
+        border: 1px solid @turquoise;
+        margin: -100px auto 0 auto;
+        transform: scale(.91);   
+    }
+}
 
 // buttons btn(font-size, bg-color, color, padding, border)
 .button {
